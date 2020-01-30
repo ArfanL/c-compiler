@@ -23,13 +23,12 @@ for line in comment.split("\n"):
     for word in re.findall(regex, line):
         if word[0]:
             if word[0] in keywords:
-                token.append(word[0])
+                print("keyword:",word[0])
             else:
-                token.append(word[0])
+                print("id:",word[0])
         elif word[1]:
-            token.append(word[1])
+            print("num:",word[1])
         elif word[5]:
-            token.append(word[5])
+            print("symbol",word[5])
         elif word[6]:
-            token.append(word[6])
-print (token)
+            print("error:",word[6])
